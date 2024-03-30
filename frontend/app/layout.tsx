@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import { GillSans, GillSansBold } from './fonts';
 
 export const metadata: Metadata = {
   title: "Warehouse",
@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={GillSans.className}>{children}</body>
     </html>
   );
 }
