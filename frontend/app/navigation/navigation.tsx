@@ -11,6 +11,10 @@ type Props = {
 
 export default function Navigation({ needDummy }: Props) {
 
+    /**
+    const startTh = 200;
+    const endTh = 800;
+
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
     const [scrollY, setScrollY] = useState(0);
@@ -37,7 +41,6 @@ export default function Navigation({ needDummy }: Props) {
         if (window.innerWidth >= 1280) {
             setLogoWidth(window.innerWidth/5);
         }
-
     }
 
     function handleResize() {
@@ -57,6 +60,21 @@ export default function Navigation({ needDummy }: Props) {
         handleResize();
         handleScroll();
     }, [])
+    */
+
+
+    const [navHeight, setNavHeight] = useState(0);
+    const [logoWidth, setLogoWidth] = useState(0);
+
+    function handleResize() {
+        setNavHeight(window.innerHeight * 0.16);
+        setLogoWidth(window.innerWidth/5);
+    }
+
+    useEffect(() => {
+        handleResize();
+    }, [])
+
 
     return (
         <div>

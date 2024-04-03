@@ -2,14 +2,21 @@
 
 import { useState, useEffect, useRef } from 'react';
 
-export default function Workcard(props) {
+type Props = {
+    place: string,
+    date: string,
+    title: string,
+    imgurl: string,
+}
 
-    const targetRef = useRef();
+export default function Workcard(props: Props) {
+
+    const targetRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
 
     function handleResize() {
         if (targetRef.current) {
-            const width = targetRef.current.offsetWidth;
+            const width = targetRef? targetRef.current.offsetWidth : 0;
             setHeight(width);
             window.addEventListener('resize', handleResize);
         }
@@ -26,15 +33,15 @@ export default function Workcard(props) {
                 </div>
             </div>
             <div className='w-full xl:p-4 md:p-3 p-2'>
-                <div className='flex justify-between border-b border-harrods-gold'>
-                    <div className=''>
+                <div className='flex justify-between border-b border-harrods-gold text-sm'>
+                    <div>
                         {props.place}
                     </div>
                     <div>
                         {props.date}
                     </div>
                 </div>
-                <div className='xl:py-2 py-1 xl:text-3xl md:text-lg text-md'>
+                <div className='xl:py-2 py-1 xl:text-xl md:text-lg text-md'>
                     {props.title}
                 </div>
             </div>

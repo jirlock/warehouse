@@ -27,7 +27,7 @@ export default function Cover() {
 
     return (
         <div className='min-h-screen overflow-hidden z-2'>
-            <div className='min-h-screen bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden bg-[url("/images/flatS/_DSC0118.jpg")] z-1' style={{ filter: `blur(${blursize}px)` }}>
+            <div className='min-h-screen bg-fixed bg-cover bg-center bg-no-repeat overflow-hidden bg-[url("/images/flatS/_DSC0118.jpg")] z-1 scale-110' style={{ filter: `blur(${blursize}px)` }}>
             </div>
         </div>
     )

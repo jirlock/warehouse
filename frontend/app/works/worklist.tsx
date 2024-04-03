@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react';
 import Workcard from "./workcard"
 
 const src = [
@@ -7,7 +8,7 @@ const src = [
         title: 'OH House',
         place: 'Chiba/Japan',
         date: '2023.8',
-        imgurl: '/images/houseOH/houseOH_025_S.jpg',
+        imgurl: '/images/houseOH/houseOH_020_S.jpg',
     },
     {
         title: 'Flat S',
@@ -20,25 +21,19 @@ const src = [
         place: 'Tokyo/Japan',
         date: '2021.3',
         imgurl: '/images/akamon/main.png',
-    },
-    {
-        title: '小さな部屋に絵具を渡す',
-        place: 'Tokyo/Japan',
-        date: '2021.8',
-        imgurl: '/images/smallFurniture/main.JPG',
     }
 ]
 
-export default function Works() {
+export default function Worklist() {
 
     return (
-        <div className='z-2 lg:py-24 lg:px-24'>
-            <div className='flex justify-center items-center lg:py-12'>
-                <div className='lg:text-3xl md:text-lg text-md'>
+        <div>
+            <div className='flex justify-center items-center'>
+                <div className='xl:text-3xl'>
                     WORKS
                 </div>
             </div>
-            <div className='grid grid-cols-2'>
+            <div className='grid grid-cols-2 pt-24'>
                 {
                     src.map(elem => (
                         <div>
