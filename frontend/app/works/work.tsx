@@ -15,6 +15,12 @@ const src = [
         date: '2022.4',
         imgurl: '/images/flatS/_DSC0155.jpg',
     },
+    {
+        title: '赤門トイレコンペ',
+        place: 'Tokyo/Japan',
+        date: '2021.3',
+        imgurl: '/images/akamon/main.jpg',
+    }
 ]
 
 export default function Works() {
