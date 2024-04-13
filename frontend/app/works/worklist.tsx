@@ -46,8 +46,8 @@ export default function Worklist() {
             <div className='grid grid-cols-2 pt-24'>
                 {
                     src.map((elem) => (
-                        <div>
-                            <Workcard key={elem.id} title={elem.title} place={elem.place} date={elem.date} imgurl={elem.imgurl}/>
+                        <div key={elem.id}>
+                            <Workcard id={elem.id} key={elem.id} title={elem.title} place={elem.place} date={elem.date} imgurl={elem.imgurl}/>
                         </div>
                     ))
                 }

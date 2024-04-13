@@ -45,8 +45,8 @@ export default function Works() {
             <div className='grid grid-cols-2'>
                 {
                     src.map((elem) => (
-                        <div>
-                            <Workcard key={elem.id} title={elem.title} place={elem.place} date={elem.date} imgurl={elem.imgurl}/>
+                        <div key={elem.id}>
+                            <Workcard id={elem.id} key={elem.id} title={elem.title} place={elem.place} date={elem.date} imgurl={elem.imgurl}/>
                         </div>
                     ))
                 }

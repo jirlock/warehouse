@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 
 type Props = {
+    id: number,
     place: string,
     date: string,
     title: string,
