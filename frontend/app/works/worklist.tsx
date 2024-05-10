@@ -43,7 +43,7 @@ export default function Worklist() {
                     WORKS
                 </div>
             </div>
-            <div className='grid grid-cols-2 pt-24'>
+            <div className='grid lg:grid-cols-2 grid-cols-1 lg:pt-24 pt-8'>
                 {
                     src.map((elem) => (
                         <div key={elem.id}>
